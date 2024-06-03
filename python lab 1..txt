@@ -1,0 +1,33 @@
+[1] Calculate the multiplication and sum of two numbers
+a = 5                                                   #declaring a value to a variabla
+b = 5                                                   #declaring a value to a variable
+addition = a+b                                          #addition of 2 numbers
+print(addition)                                         #printing the addition value of 2 numbers                                         
+Output-:- 10
+x = 5                                                   #declaring a value to a variable
+y = 5                                                   #declaring a value to avariable
+multiplication = a*b                                    #multiplication of 2 numbers
+print(multiplication)                                   #printing the multiplied value of 2 numbers
+Output-: 25
+------------------------------------------------------------------------------------------------------
+[2] Declare two variables and print that which variable is largest using ternary operators
+a = 10                                                  #declaring a value to a variable 
+b = 5                                                   #declaring a value to a variable       
+print("a is largest" if a>b else "b is largest")        #ternary operator
+Output-: a is largest                                   #printing result
+------------------------------------------------------------------------------------------------------
+[3] Python program to convert the temperature in degree centigrade to fahrenheit
+a = 35                                                  #degree centigrade declaration                                                   
+b = (a*9/5)+32                                          #converting degree centigrade to fahrenheit
+print(b)                                                #printing fahrenheit
+Output-: 95.0
+------------------------------------------------------------------------------------------------------
+[4] python program to find the area of a triangle whose sides are given
+base=5                                                  #declaring a value to a variable
+height=10                                               #declaring a value to a variable
+area_of_triangle=0.5*base*height                        #condition
+print(area_of_triangle)                                 #printing the result
+Output-: 25.0
+------------------------------------------------------------------------------------------------------
+
+
