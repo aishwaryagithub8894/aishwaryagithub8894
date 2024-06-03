@@ -1,0 +1,79 @@
+1. Print the first 10 natural numbers using for loop
+
+ for i in range(1,11):                               #using forloop 
+    print(i)                                         #printing the result 
+output-: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+----------------------------------------------------------------------------------------------------------------
+2. Python program to check if the given string is a palindrome 
+def is_palindrome(s):                                
+    s = s.replace(" ", "").lower()
+    return s == s[::-1]
+input_string = input("Enter a string: ")
+if is_palindrome(input_string):                    #conditional statement
+    print("The string is a palindrome.")
+else:
+    print("The string is not a palindrome.")       #printing the result
+output-: 
+Enter a string: aishwarya
+The string is not a palindrome.
+--------------------------------------------------------------------------------------------------------------------
+3. Python program to check if a given number is an Armstrong number 
+def is_armstrong_number(num):
+    num_str = str(num)
+    num_digits = len(num_str)
+    sum_of_digits = sum(int(digit)**num_digits for digit in num_str)             #condition
+    return num == sum_of_digits
+input_number = int(input("Enter a number:"))                                     #user input
+if is_armstrong_number(input_number):
+    print(f"{input_number} is an Armstrong number.")
+else:
+    print(f"{input_number} is not an Armstrong number.")                        #printing the result
+output-:
+Enter a number:8
+8 is an Armstrong number.
+----------------------------------------------------------------------------------------------------------------------
+4. Python program to get the Fibonacci series between 0 to 50 
+def fibonacci_series(limit):                       #function to generate fibonacci series
+    a, b = 0, 1
+    print(a, end=" ")                              #printing the first fibonaci number
+    while b < limit:                               #using loop to generate next
+        print(b, end=" ")                       
+        a, b = b, a + b
+fibonacci_series(50)                               #calling the function
+output-:
+0 1 1 2 3 5 8 13 21 34 
+-------------------------------------------------------------------------------------------------------------------------
+5. Python program to check the validity of password input by users
+import re
+def is_valid_password(password):
+    if len(password) < 8:                            #conditional statement
+        return False
+    if not re.search(r'[A-Z]', password):
+        return False
+    if not re.search(r'[a-z]', password):
+        return False
+    if not re.search(r'\d', password):
+        return False
+    if not re.search(r'[!@#$%^&*()_+=-]', password):
+        return False
+    return True
+password = input("Enter your password: ")            #testing the function
+if is_valid_password(password):
+    print("Valid password.")                         #printing the result
+else:
+    print("Invalid password.")                       #printing the result
+output-:
+Enter your password: vijayvinay@123
+Invalid password.
+----------------------------------------------------------------------------------------------------------------------------
+            
