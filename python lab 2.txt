@@ -1,0 +1,21 @@
+#1 Using input function take two number and then swap the number
+
+num1 = 4                                                              #giving values to a variable                                 
+num2 = 8                                                              #giving values to a varaiable 
+temp = num1                                                           #swapping the numbers
+num1 = num2                                                           #swapping the numbers
+num2 = temp                                                           #swapping the numbers
+print("swapped numbers: num1=",num1, ",num2 =", num2)                 #printing the result after swapping 
+
+OUTPUT-:  swapped numbers: num1= 8 ,num2 = 4
+------------------------------------------------------------------------------------------------------------
+#2 Write a program to convert kilometers to miles
+
+kilometers = float(input("Enter distance in kilometers: "))            #input distance in kilometers
+Enter distance in kilometers: 5
+conv_fac = 0.621371                                                    #conversion factor
+miles = kilometers * conv_fac                                          #convert kilometers to miles
+print(f"{kilometers} kilometers is equal to {miles} miles")            #printing the result
+
+ OUTPUT-: 5.0 kilometers is equal to 3.106855 miles
+-------------------------------------------------------------------------------------------------------------
