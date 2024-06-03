@@ -1,0 +1,44 @@
+#1 Declare a div() function with two parameters. Then call the function and pass two numbers and display their division. 
+print("Enter the two number:")
+number1=int(input())
+number2=int(input())
+def Div(number1,number2):                             #taking 2 parameters
+    if number1<number2:                               #condition 
+        return 0
+    return 1 + Div(number1-number2,number2)
+print("result ",Div(number1,number2))                 #printing the result
+    
+OUTPUT-: Enter the two number:
+10
+2
+result  5
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+#2 Declare a square() function with one parameter. Then call the function and pass one number and display the square of that number .
+def square(x):                                       #square function with 1 parameter                      
+    return x * x
+
+number = 10
+result = square(number)                             #calling the function
+print(f"The square of {number} is: {result}")       #printing th result
+OUTPUT-: The square of 10 is: 100
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+#3 Using max() and min() functions display the maximum and minimum of 5 random numbers.
+import random
+numbers = [random.randint(1, 100) for _ in range(5)]
+maximum = max(numbers)                              #using max()
+minimum = min(numbers)                              #using min()
+
+print(f"Random numbers: {numbers}")                #printing the result
+print(f"Maximum: {maximum}")
+print(f"Minimum: {minimum}")
+OUTPUT-: Random numbers: [68, 65, 19, 15, 6]
+Maximum: 68
+Minimum: 6
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+#4 Accept a name from the user and display that in lower case using lower() function
+name = input("Enter your name: ")
+lowercase_name = name.lower()                           #using lower(),converting the name to lower class
+print(f"Name in lowercase: {lowercase_name}")           #printing the result
+OUTPUT-: Enter your name: AISHWARYA
+Name in lowercase: aishwarya
+------------------------------------------------------------------------------------------------------------------------------------------------------------
