@@ -1,0 +1,72 @@
+ 1. Write a Python program to Get Only unique items from two sets. 
+Input: 
+set1 = {10, 20, 30, 40, 50} 
+set2 = {30, 40, 50, 60, 70} 
+
+def get_unique_items(set1, set2):                                                   #Defining a function to get unique items from two sets                                   
+    unique_items = set1.union(set2)                                                 #Combining the elements of both sets without duplication
+    return unique_items
+set1 = {10, 20, 30, 40, 50}                                                         #Input sets
+set2 = {30, 40, 50, 60, 70}
+unique_items = get_unique_items(set1, set2)                                         #Get unique items using the defined function
+print("Unique items:", unique_items)                                                #Printing the unique items
+output-:
+Unique items: {70, 40, 10, 50, 20, 60, 30}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a Python program to Return a set of elements present in Set A or B, but not both.
+Input: 
+set1 = {10, 20, 30, 40, 50} 
+set2 = {30, 40, 50, 60, 70}
+
+def get_elements_in_either_but_not_both(set1, set2):                               #Defining a function to get elements present in either set but not both
+    result = set1.symmetric_difference(set2)                                       #Get the symmetric difference of two sets 
+    return result
+set1 = {10, 20, 30, 40, 50}                                                        #Input sets
+set2 = {30, 40, 50, 60, 70}
+result = get_elements_in_either_but_not_both(set1, set2)                           #Get elements present in either set but not both using the defined function
+print("Output:", result)                                                           #Printing the result
+Output:-
+{20, 70, 10, 60}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Python program to Check if two sets have any elements in common. If yes, display the common elements. 
+Input: 
+set1 = {10, 20, 30, 40, 50} 
+set2 = {60, 70, 80, 90, 10} 
+
+def check_common_elements(set1, set2):                                           #defining a function
+    common_elements = set1.intersection(set2)                                    #finding the common elements between sets
+    return common_elements
+set1 = {10, 20, 30, 40, 50}                                                      #Input sets
+set2 = {60, 70, 80, 90, 10}
+common_elements = check_common_elements(set1, set2)
+if common_elements:                                                             #checking if commom elements exist                                                    
+    print("Output:", common_elements)                                           #displaying the common elements
+else:
+    print("No common elements found.")                                          #displaying the no comon elements found
+output-:
+{10}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a Python program to Remove items from set1 that are not common to both set1 and set2.
+Input: 
+set1 = {10, 20, 30, 40, 50} 
+set2 = {30, 40, 50, 60, 70}
+
+
+def remove_non_common_items(set1, set2):                                       #defining a function                                        
+    set1.intersection_update(set2)                                             #Updating set1 to contain only the elements
+set1 = {10, 20, 30, 40, 50}                                                   
+set2 = {30, 40, 50, 60, 70}                                                    #Input sets
+remove_non_common_items(set1, set2)                                            #Remove non-common items from set1 using
+print("Output:", set1)                                                         #Print the updated set1
+    set1.intersection_update(set2)
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+remove_non_common_items(set1, set2)
+print("Output:", set1)
+output-:
+ {40, 50, 30}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
