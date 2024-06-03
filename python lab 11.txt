@@ -1,0 +1,97 @@
+1. Write a Python program to sum all the items in a list. 
+def sum_list(lst):                                              # Define a function
+    total = 0                                                   # Initializing a variable
+    for item in lst:                                            # Iterate through each item in the list
+        total += item
+    return total
+my_list = [1, 2, 3, 4, 5]
+print("Sum of the list:", sum_list(my_list))                    # printing the result
+output-:
+Sum of the list: 15
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Write a Python program to get the largest and smallest number from a list without builtin functions.
+def find_largest_smallest(numbers):                             # Define a function named find_largest_smallest
+    if not numbers:                                             # Check if the list is empty
+        return None, None
+    largest = numbers[0]                                        # Initializing the largest and smallest numbers
+    smallest = numbers[0]
+    for num in numbers:                                         # Iteration through each number in the list
+        if num > largest:                                       #if 
+            largest = num
+        elif num < smallest:                                    #elif
+            smallest = num
+    return largest, smallest                                   # Returning the largest and smallest numbers found
+numbers_list = [5, 3, 9, 1, 7, 2]                              # Define a list of numbers
+largest, smallest = find_largest_smallest(numbers_list)        # calling the function
+print("Largest number:", largest)                              # printing the result
+print("Smallest number:", smallest)                            # printing the result
+output-:
+Largest number: 9
+Smallest number: 1
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+3. Write a Python program to find duplicate values from a list and display those. 
+def find_duplicates(input_list):                               # defining a function
+    duplicates = []                                            # Initialize an empty list to store duplicate values
+    seen = set()                                               # Initialize an empty set to keep track of seen elements
+    for item in input_list:                                    # If the item is already in the seen set, it's a duplicate
+        if item in seen:                                       # Append the duplicate item to the duplicates list
+            duplicates.append(item)
+        else:
+            seen.add(item)                                     # If the item is not in the seen set, add it to the seen set
+    return duplicates                                          # Returning the list of duplicate values found
+my_list = [1, 2, 3, 4, 2, 5, 6, 3, 7, 8, 1]                    # defining a list with some elements
+duplicate_values = find_duplicates(my_list)
+print("Duplicate values in the list:", duplicate_values)       # printing the result
+output-:
+Duplicate values in the list: [2, 3, 1]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
+
+Original list: [1, 1, 2, 3, 4, 4, 5, 1] 
+
+Length of the first part of the list: 3 
+
+Splitted the said list into two parts: 
+
+([1, 1, 2], [3, 4, 4, 5, 1]) 
+================================================
+def split_list(original_list, length_first_part):                        # defining a function                      
+    if length_first_part < 0 or length_first_part > len(original_list):
+        return "Invalid length for the first part of the list."
+    first_part = original_list[:length_first_part]                       # Slice the original list to get the first part
+    second_part = original_list[length_first_part:]                      # Slice the original list to get the second part
+    return (first_part, second_part)                                     # Return a tuple containing the two parts
+original_list = [1, 1, 2, 3, 4, 4, 5, 1]                                 # Defining the original list
+length_first_part = 3                                                    # Define the length of the first part
+result = split_list(original_list, length_first_part)                    # Calling the split list function and storing the result
+print("Splitted the said list into two parts:")                          # printing the rresult
+print(result)
+output-:
+Splitted the said list into two parts:
+([1, 1, 2], [3, 4, 4, 5, 1])
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. Write a Python program to traverse a given list in reverse order, and print the elements with the original index. Original list: ['red', 'green', 'white', 'black'] Traverse the said list in reverse order:
+
+black 
+
+white 
+
+green 
+
+red
+=====================================
+def traverse_reverse(lst):
+    length = len(lst)                                                   # Get the length of the list
+    
+    for i in range(length - 1, -1, -1):                                 # Iterate through the list in reverse order
+        print(lst[i], "at index", i)                                    # Print each element and its original index
+original_list = ['red', 'green', 'white', 'black']                      # Defining the original list
+print("Traverse the said list in reverse order:")                       # Printing the result
+traverse_reverse(original_list)                                         # Calling the traverse_reverse function with the original list
+output-:
+Traverse the said list in reverse order:
+black at index 3
+white at index 2
+green at index 1
+red at index 0
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
