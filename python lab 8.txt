@@ -1,0 +1,81 @@
+1. Write a Python program to Count all letters, digits, and special symbols from the given string Input = “P@#yn26at^&i5ve”  
+
+def count_characters(input_string):                                            #define a function to count characters,digits and symbols
+    chars = 0                                                                  #initializing counters for chars
+    digits = 0                                                                 #initializing counters for digits
+    symbols = 0                                                                #initializing counters for symbols
+    
+    for char in input_string:                                                  #iterate through each character in input string
+        if char.isalpha():                                                     #checking if it the char is an alphabet letter
+            chars += 1
+        elif char.isdigit():                                                   #increment to digit count
+            digits += 1
+        else:
+            symbols += 1                                                       #increment the symbol count
+    
+    return chars, digits, symbols                                              #returning the count of chars,digits,symbols
+
+input_string = "P@#yn26at^&i5ve"                                               #input string
+chars, digits, symbols = count_characters(input_string)                        #calling the function to count 
+print("Chars =", chars, "Digits =", digits, "Symbols =", symbols)              #printing the result
+output-:
+Chars = 8 Digits = 3 Symbols = 4
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 2. Write a Python program to remove duplicate characters of a given string. 
+
+def remove_duplicates(input_string):                                          #def function
+    result = ""                                                               #initializing an empty string to store result
+    for char in input_string:
+       if char not in result:
+        result += char
+    return result                                                             #return the string with duplicate chars removed
+input_string = "String and String Function"                                   #input string
+output_string = remove_duplicates(input_string)                               #calling the function
+print("Output:", output_string)                                               #printing the result
+Output:-
+ String adFuco
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a Python program to count Uppercase, Lowercase, special character and numeric values in a given string
+ 
+def count_characters(input_string):                                          #def function
+    uppercase = 0                                                            #initializing counters
+    lowercase = 0                                                            #initializing counters
+    numeric = 0                                                              #initializing counters
+    special = 0                                                              #initializing counters
+    
+    for char in input_string:                                                #iteration 
+        if char.isupper():
+            uppercase += 1                                                   # Increment the uppercase count                                         
+        elif char.islower():
+            lowercase += 1                                                   # Increment the lowercase count
+        elif char.isdigit():
+            numeric += 1                                                     # Increment the numeric count
+        else:
+            special += 1                                                     # Increment the special character count
+    
+    return uppercase, lowercase, numeric, special
+ 
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"                                                              # Input string
+uppercase, lowercase, numeric, special = count_characters(input_string)                                               # Call the function
+print("UpperCase:", uppercase, "LowerCase:", lowercase, "NumberCase:", numeric, "SpecialCase:", special)              # Print the counts 
+output-:
+UpperCase: 5 LowerCase: 18 NumberCase: 5 SpecialCase: 11
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Write a Python Count vowels in a string 
+
+def count_vowels(input_string):                                               #def function
+    vowels = "aeiouAEIOU"                                                     #defining a string containing all vowels
+    vowel_count = 0                                                           #initializing counter for vowels
+     
+    for char in input_string:                                                 #iterate through each character in the input string 
+        if char in vowels:
+            vowel_count += 1
+    
+    return vowel_count
+
+input_string = "Welcome to Python Assignment"                               #input string
+total_vowels = count_vowels(input_string)                                   #call the function 
+print("Total vowels are:", total_vowels)                                    #printing the result
+output-:
+Total vowels are: 8
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
